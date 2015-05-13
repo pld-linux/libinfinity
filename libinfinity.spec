@@ -207,6 +207,12 @@ rm -rf $RPM_BUILD_ROOT
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
+%post   gtk -p /sbin/ldconfig
+%postun gtk -p /sbin/ldconfig
+
+%post   gtk3 -p /sbin/ldconfig
+%postun gtk3 -p /sbin/ldconfig
+
 %files -f libinfinity-0.6.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README.md
