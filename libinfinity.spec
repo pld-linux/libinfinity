@@ -3,12 +3,12 @@
 %bcond_without	gtk2		# GTK+ 2.x based libraries
 %bcond_without	gtk3		# GTK+ 3.x based libraries
 %bcond_without	static_libs	# static libraries
-#
+
 Summary:	Infinote libraries to build collaborative text editors
 Summary(pl.UTF-8):	Biblioteki Infinote do tworzenia edytorów tekstów do pracy grupowej
 Name:		libinfinity
 Version:	0.6.6
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://releases.0x539.de/libinfinity/%{name}-%{version}.tar.gz
@@ -79,6 +79,9 @@ Statyczne biblioteki podstawowe Infinote.
 Summary:	API documentation for Infinote libraries
 Summary(pl.UTF-8):	Dokumentacja API bibliotek Infinote
 Group:		Documentation
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 API documentation for Infinote libraries.
