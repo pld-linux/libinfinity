@@ -79,9 +79,7 @@ Statyczne biblioteki podstawowe Infinote.
 Summary:	API documentation for Infinote libraries
 Summary(pl.UTF-8):	Dokumentacja API bibliotek Infinote
 Group:		Documentation
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description apidocs
 API documentation for Infinote libraries.
