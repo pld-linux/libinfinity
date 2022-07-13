@@ -7,14 +7,15 @@
 Summary:	Infinote libraries to build collaborative text editors
 Summary(pl.UTF-8):	Biblioteki Infinote do tworzenia edytorów tekstów do pracy grupowej
 Name:		libinfinity
-Version:	0.6.7
-Release:	2
+Version:	0.6.8
+Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://releases.0x539.de/libinfinity/%{name}-%{version}.tar.gz
-# Source0-md5:	689585e566c12e320f2a1b08ae81c1bd
+#Source0Download: https://github.com/gobby/libinfinity/releases
+Source0:	https://github.com/gobby/libinfinity/releases/download/%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	9f3fbf802ffbca94a762f073bcd4fbaa
 Patch0:		%{name}-link.patch
-URL:		http://gobby.0x539.de/
+URL:		https://gobby.github.io/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	avahi-devel >= 0.6
