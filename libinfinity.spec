@@ -8,7 +8,7 @@ Summary:	Infinote libraries to build collaborative text editors
 Summary(pl.UTF-8):	Biblioteki Infinote do tworzenia edytorów tekstów do pracy grupowej
 Name:		libinfinity
 Version:	0.6.8
-Release:	2
+Release:	3
 License:	LGPL v2+
 Group:		Libraries
 #Source0Download: https://github.com/gobby/libinfinity/releases
@@ -175,10 +175,11 @@ Statyczne biblioteki Infinote GTK+ 3.
 %{__aclocal} -I m4
 %{__automake}
 %{__autoconf}
+%global configuredir ..
 for d in %{?with_gtk2:gtk2} %{?with_gtk3:gtk3} ; do
 install -d build-${d}
 cd build-${d}
-../%configure \
+%configure \
 	--enable-gtk-doc \
 	%{!?with_static_libs:--disable-static} \
 	`[ "$d" != "gtk3" ] || echo --with-gtk3` \
